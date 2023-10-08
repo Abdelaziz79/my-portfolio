@@ -22,7 +22,7 @@ export default function Home() {
 
   return (
     <div className={darkMode ? 'dark' : ''}>
-      <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
+      <main className="bg-white px-5 md:px-20 lg:px-40 dark:bg-gray-900 sm:px-5">
         <section className='min-h-screen text-black'>
           <nav className="py-10 mb-12 flex justify-between dark:bg-gray-900">
             <h1 className="text-xl font-bold uppercase dark:text-white">azeez</h1>
