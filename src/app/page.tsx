@@ -11,8 +11,9 @@ import { useState } from 'react'
 import { BsFillMoonStarsFill, BsFillSunFill } from 'react-icons/bs'
 import Skills from './components/Skills/Skills'
 export default function Home() {
-  const getDarkMode = window.localStorage.getItem('darkMode');
-  const [darkMode, setDarkMode] = useState(getDarkMode ? JSON.parse(getDarkMode) : false);
+  // const getDarkMode = globalThis?.localStorage?.getItem('darkMode');
+  // const [darkMode, setDarkMode] = useState(getDarkMode ? JSON.parse(getDarkMode) : false);
+  const [darkMode, setDarkMode] = useState( false);
 
   const setDarkModeHandler = () => {
     window.localStorage.setItem('darkMode', JSON.stringify(!darkMode));
