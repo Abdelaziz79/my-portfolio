@@ -5,15 +5,10 @@ import myImage from "../../assets/images/photo_2021-04-07_17-42-11.jpg";
 import Image from "next/image";
 import Card from "../Card/Card";
 import img1 from "../../assets/img/musicPlayer.png";
-import img2 from "../../assets/img/Screenshot 2023-09-17 124446.png";
-import img3 from "../../assets/img/Screenshot 2023-09-17 125541.png";
-import img4 from "../../assets/img/Screenshot 2023-09-17 125756.png";
-import img5 from "../../assets/img/Screenshot 2023-09-17 130615.png";
-import img6 from "../../assets/img/Screenshot 2023-09-17 131217.png";
-import img7 from "../../assets/img/Screenshot 2023-09-17 131420.png";
-import img8 from "../../assets/img/Screenshot 2023-09-17 131801.png";
-import img9 from "../../assets/img/Screenshot 2023-09-17 132242.png";
-import img10 from "../../assets/img/Screenshot 2023-09-17 132534.png";
+import img2 from "../../assets/img/mediaPlayer.png";
+import img3 from "../../assets/img/ml.png";
+import img4 from "../../assets/img/aimTrainer.png";
+
 import maze from "../../assets/img/maze.png";
 import p from "../../assets/img/p.png";
 
