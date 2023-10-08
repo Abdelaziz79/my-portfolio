@@ -4,7 +4,7 @@ import myImage from "../../assets/images/photo_2021-04-07_17-42-11.jpg";
 
 import Image from "next/image";
 import Card from "../Card/Card";
-import img1 from "../../assets/img/Screenshot 2023-09-17 124141.png";
+import img1 from "../../assets/img/musicPlayer.png";
 import img2 from "../../assets/img/Screenshot 2023-09-17 124446.png";
 import img3 from "../../assets/img/Screenshot 2023-09-17 125541.png";
 import img4 from "../../assets/img/Screenshot 2023-09-17 125756.png";
