@@ -8,6 +8,7 @@ import img1 from "../../assets/img/musicPlayer.png";
 import img2 from "../../assets/img/mediaPlayer.png";
 import img3 from "../../assets/img/ml.png";
 import img4 from "../../assets/img/aimTrainer.png";
+import toDo from "../../assets/img/to-do-app.png";
 
 import maze from "../../assets/img/maze.png";
 import p from "../../assets/img/p.png";
@@ -28,6 +29,7 @@ const Projects = () => {
                 <Card description="music player made with java " title="music player" source="https://github.com/Abdelaziz79/music-player" imageSrc={img1}></Card>
                 <Card description="video player made with java" title="video player" source="https://github.com/Abdelaziz79/media-player" imageSrc={img2}></Card>
                 <Card description="machine learning made with python" title="machine learning " source="https://github.com/Abdelaziz79/ml-pr" imageSrc={img3}></Card>
+                <Card description="to do app made with react" title="to do app " source="https://github.com/Abdelaziz79/to-do-app" demo="https://azeez-to-do-app.surge.sh" imageSrc={toDo}></Card>
 
             </div>
         </>
