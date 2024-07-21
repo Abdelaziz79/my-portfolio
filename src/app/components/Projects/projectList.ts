@@ -9,6 +9,7 @@ import fun from "@/app/assets/img/fun.png";
 import maze from "@/app/assets/img/maze.png";
 import p from "@/app/assets/img/p.png";
 import wild from "@/app/assets/img/wild.png";
+
 const projectList = [
   {
     id: 0,
@@ -25,7 +26,7 @@ const projectList = [
       "CodeRoad is your ultimate destination for learning and mastering coding skills. Whether you're a beginner or an experienced programmer, we provide a platform where you can explore various topics, take quizzes to test your knowledge, engage with the community through posts and comments, and continuously improve your coding abilities.",
     title: "CodeRoad",
     source: "https://github.com/Abdelaziz79/codeRoad",
-    demo: "code-road-seven.vercel.app",
+    demo: "https://code-road-seven.vercel.app/",
     imageSrc: codeRoad,
   },
   {
@@ -34,7 +35,7 @@ const projectList = [
       "The Wild Oasis hotel management app is a full-featured React web application that allows hotel employees to manage cabins, bookings, and guests. The app uses Supabase for its backend and implements a variety of advanced React techniques, such as HOCs, the Compound Component Pattern, and React Query.",
     title: "The Wild Oasis",
     source: "https://github.com/Abdelaziz79/the-wild-oasis?tab=readme-ov-file",
-    demo: "https://the-wild-oasis-azeez.netlify.app/login",
+    demo: "https://the-wild-oasis-azeez.netlify.app",
     imageSrc: wild,
   },
   {

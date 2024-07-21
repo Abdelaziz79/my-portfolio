@@ -1,6 +1,8 @@
 import React from "react";
 
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
+import MyButton from "../MyButton";
 
 interface CardProps {
   description: string;
@@ -36,17 +38,17 @@ const Card: React.FC<CardProps> = ({
           </p>
         </div>
         <div className="flex justify-center gap-3">
-          <button className="bg-gradient-to-r from-cyan-500 to-blue-500  text-white font-bold px-4  py-2 rounded-md">
+          <MyButton>
             <a href={source} target="_blank">
               Source
             </a>
-          </button>
+          </MyButton>
           {demo && (
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-500  text-white font-bold px-4  py-2 rounded-md">
-              <a href={demo} target="_blank">
+            <MyButton>
+              <Link href={demo} target="_blank">
                 Demo
-              </a>
-            </button>
+              </Link>
+            </MyButton>
           )}
         </div>
       </div>

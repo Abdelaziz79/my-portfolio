@@ -1,4 +1,5 @@
-import { AiFillFacebook, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import Link from "next/link";
+import { AiFillFacebook, AiFillGithub } from "react-icons/ai";
 
 const Footer = () => {
   return (
@@ -25,50 +26,49 @@ const Footer = () => {
             />
           </div>
           <textarea
-            className="p-2 bg-gray-100 rounded-md h-16 dark:bg-gray-800 dark:text-white"
+            className="p-2 bg-gray-100 rounded-md h-40 dark:bg-gray-800 dark:text-white"
             name="message"
             placeholder="Your Message"
-          ></textarea>
-
+          />
           <input
-            className="bg-gradient-to-r from-cyan-500 to-blue-500  text-white font-bold px-4 py-2 rounded-md my-5 w-28"
+            className="mt-3 bg-gradient-to-r from-cyan-500 to-blue-500  px-4 py-1 rounded-md text-white hover:scale-110 duration-300 hover:from-blue-500 hover:to-cyan-500  w-28"
             type="submit"
             value="Send"
           />
         </form>
       </div>
 
-      <div>
-        <div className="py-10 dark:bg-gray-900">
-          <div className="flex justify-center text-gray-600 gap-16 text-5xl dark:text-gray-400">
-            <a href="https://github.com/Abdelaziz79" target="_blank">
-              <AiFillGithub />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/abdelaziz-elhadry-182455205/"
-              target="_blank"
-            >
-              <AiFillLinkedin />
-            </a>
-            <a
-              href="https://www.facebook.com/abdelaziz.elhadry.16"
-              target="_blank"
-            >
-              <AiFillFacebook />
-            </a>
-          </div>
-          <div className="mt-10 flex justify-center text-gray-600 gap-8 text-md dark:text-gray-400">
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#resume">resume</a>
-          </div>
-          <p className="mt-10 text-center dark:text-gray-500">
-            © Abdelaziz Elhadry 2023
-          </p>
-        </div>
-      </div>
+      <MiniFooter />
     </>
   );
 };
+
+export function MiniFooter() {
+  return (
+    <div>
+      <div className="py-10 dark:bg-gray-900">
+        <div className="flex justify-center text-gray-600 gap-16 text-5xl dark:text-gray-400">
+          <Link href="https://github.com/Abdelaziz79" target="_blank">
+            <AiFillGithub />
+          </Link>
+          <Link
+            href="https://www.facebook.com/abdelaziz.elhadry.16"
+            target="_blank"
+          >
+            <AiFillFacebook />
+          </Link>
+        </div>
+        <div className="mt-10 flex justify-center text-gray-600 gap-8 text-md dark:text-gray-400">
+          <Link href="/#about">About</Link>
+          <Link href="/#projects">Projects</Link>
+          <Link href="/resume">Resume</Link>
+        </div>
+        <p className="mt-10 text-center dark:text-gray-500">
+          © Abdelaziz Elhadry 2024
+        </p>
+      </div>
+    </div>
+  );
+}
 
 export default Footer;
