@@ -8,22 +8,28 @@ import "react-pdf/dist/Page/TextLayer.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 const PdfViewer = ({ fileUrl }: { fileUrl: string }) => {
-  const [width, setWidth] = useState(window?.innerWidth * 0.65 || 0);
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    // This ensures the code runs only on the client side
+    if (typeof window !== "undefined") {
+      setWidth(window.innerWidth * 0.65);
+
+      const handleResize = () => {
+        setWidth(window.innerWidth * 0.65);
+      };
+
+      window.addEventListener("resize", handleResize);
+
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
+  }, []);
 
   const downloadPdf = () => {
     saveAs(fileUrl, "Abdelaziz Elhadry Resume.pdf");
   };
-
-  const handleResize = () => {
-    setWidth(window?.innerWidth * 0.65 || 0);
-  };
-
-  useEffect(() => {
-    window?.addEventListener("resize", handleResize);
-    return () => {
-      window?.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   return (
     <div>
