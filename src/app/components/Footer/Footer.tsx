@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { AiFillFacebook, AiFillGithub } from "react-icons/ai";
+import { AiFillFacebook, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 const Footer = () => {
   return (
@@ -31,7 +31,7 @@ const Footer = () => {
             placeholder="Your Message"
           />
           <input
-            className="mt-3 bg-gradient-to-r from-cyan-500 to-blue-500  px-4 py-1 rounded-md text-white hover:scale-110 duration-300 hover:from-blue-500 hover:to-cyan-500  w-28"
+            className="mt-3 bg-gradient-to-r from-cyan-500 to-blue-500  px-4 py-1 rounded-md text-white hover:scale-110 duration-300 hover:from-blue-500 hover:to-cyan-500 cursor-pointer  w-28"
             type="submit"
             value="Send"
           />
@@ -48,20 +48,47 @@ export function MiniFooter() {
     <div>
       <div className="py-10 dark:bg-gray-900">
         <div className="flex justify-center text-gray-600 gap-16 text-5xl dark:text-gray-400">
-          <Link href="https://github.com/Abdelaziz79" target="_blank">
-            <AiFillGithub />
+          <Link
+            href="https://github.com/Abdelaziz79"
+            target="_blank"
+            className="hover:scale-110 duration-300"
+          >
+            <span className="flex flex-col items-center">
+              <AiFillGithub />
+              <p className="text-sm">Github</p>
+            </span>
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/abdelaziz-elhadry-02858631a/"
+            target="_blank"
+            className="hover:scale-110 duration-300"
+          >
+            <span className="flex flex-col items-center">
+              <AiFillLinkedin />
+              <p className="text-sm">Linkedin</p>
+            </span>
           </Link>
           <Link
             href="https://www.facebook.com/abdelaziz.elhadry.16"
             target="_blank"
+            className="hover:scale-110 duration-300"
           >
-            <AiFillFacebook />
+            <span className="flex flex-col items-center">
+              <AiFillFacebook />
+              <p className="text-sm">Facebook</p>
+            </span>
           </Link>
         </div>
         <div className="mt-10 flex justify-center text-gray-600 gap-8 text-md dark:text-gray-400">
-          <Link href="/#about">About</Link>
-          <Link href="/#projects">Projects</Link>
-          <Link href="/resume">Resume</Link>
+          <Link href="/#about" className="hover:scale-110 duration-300">
+            About
+          </Link>
+          <Link href="/#projects" className="hover:scale-110 duration-300">
+            Projects
+          </Link>
+          <Link href="/resume" className="hover:scale-110 duration-300">
+            Resume
+          </Link>
         </div>
         <p className="mt-10 text-center dark:text-gray-500">
           © Abdelaziz Elhadry 2024

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { AiFillFacebook, AiFillGithub } from "react-icons/ai";
+import { AiFillFacebook, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import myImage2 from "../../assets/images/photo_2021-04-07_17-42-11-removebg.png";
 
 const About = () => {
@@ -21,19 +21,40 @@ const About = () => {
         </p>
       </div>
       <div className="flex justify-center text-gray-600 gap-16 text-5xl dark:text-gray-400">
-        <Link href="https://github.com/Abdelaziz79" target="_blank">
-          <AiFillGithub />
+        <Link
+          href="https://github.com/Abdelaziz79"
+          target="_blank"
+          className="hover:scale-110 duration-300"
+        >
+          <span className="flex flex-col items-center ">
+            <AiFillGithub />
+            <p className="text-sm">Github</p>
+          </span>
+        </Link>
+        <Link
+          href="https://www.linkedin.com/in/abdelaziz-elhadry-02858631a/"
+          target="_blank"
+          className="hover:scale-110 duration-300"
+        >
+          <span className="flex flex-col items-center">
+            <AiFillLinkedin />
+            <p className="text-sm">Linkedin</p>
+          </span>
         </Link>
         <Link
           href="https://www.facebook.com/abdelaziz.elhadry.16"
           target="_blank"
+          className="hover:scale-110 duration-300"
         >
-          <AiFillFacebook />
+          <span className="flex flex-col items-center">
+            <AiFillFacebook />
+            <p className="text-sm">Facebook</p>
+          </span>
         </Link>
       </div>
-      <div className=" m-20 relative rounded-full bg-gradient-to-b from-blue-500 w-80 h-80 overflow-hidden mx-auto md:h-96 md:w-96 dark:text-white">
+      <div className=" m-20 relative rounded-full bg-gradient-to-b from-blue-500 w-80 h-80 overflow-hidden mx-auto md:h-96 md:w-96 dark:text-white ">
         <Image
-          className="rounded-xl mx-auto"
+          className="rounded-xl mx-auto "
           src={myImage2}
           alt="azeez"
           objectFit="cover"
