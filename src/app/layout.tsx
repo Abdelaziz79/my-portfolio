@@ -29,7 +29,7 @@ export default function RootLayout({
               <nav className="py-10 mb-12 flex justify-between dark:bg-gray-900">
                 <Link href="/">
                   <h1 className="text-xl font-bold uppercase dark:text-white hover:scale-110 duration-300">
-                    azeez
+                    Abdalla
                   </h1>
                 </Link>
                 <ul className="flex items-center">
