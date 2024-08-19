@@ -1,54 +1,43 @@
+import myImage2 from "@/app/assets/images/abdalla.png";
 import Image from "next/image";
 import Link from "next/link";
-import { AiFillFacebook, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-import myImage2 from "@/app/assets/images/abdalla.png";
+import { AiFillFacebook, AiOutlineWhatsApp } from "react-icons/ai";
 
 const About = () => {
   return (
     <>
       <div className="text-center p-10" id="about">
         <h2 className="text-5xl py-2 text-blue-600 font-medium md:text-6xl dark:text-blue-400">
-          Abdalla Zordok
+          عبدالله زوردق
         </h2>
         <h3 className="text-2xl py-2 md:text-xl dark:text-white">
-          Software Engineer.
+          دكتور علاج طبيعي.
         </h3>
         <p className="text-md py-5 leading-8 text-gray-800 max-w-lg mx-auto md:text-xl dark:text-white">
-          Highly motivated and recent Computer Science graduate with a strong
-          foundation in front-end and back-end development. Eager to leverage
-          proficiency in various programming languages and frameworks to
-          contribute to a team building innovative web applications.
+          دكتور علاج طبيعي و تغذية علاجية و حجامة طبية حاصل على دورة التغذية
+          العلاجية بمدينة زويل للعلوم و التكنولوجيا, حاصل على دورة التغذية
+          العلاجية بمؤسسة بهية, حاصل على دورة حجامة.
         </p>
       </div>
       <div className="flex justify-center text-gray-600 gap-16 text-5xl dark:text-gray-400">
         <Link
-          href="https://github.com/Abdelaziz79"
-          target="_blank"
-          className="hover:scale-110 duration-300"
-        >
-          <span className="flex flex-col items-center ">
-            <AiFillGithub />
-            <p className="text-sm">Github</p>
-          </span>
-        </Link>
-        <Link
-          href="https://www.linkedin.com/in/abdelaziz-elhadry-02858631a/"
+          href="https://wa.me/+201019488165"
           target="_blank"
           className="hover:scale-110 duration-300"
         >
           <span className="flex flex-col items-center">
-            <AiFillLinkedin />
-            <p className="text-sm">Linkedin</p>
+            <AiOutlineWhatsApp />
+            <p className="text-sm">الواتساب</p>
           </span>
         </Link>
         <Link
-          href="https://www.facebook.com/abdelaziz.elhadry.16"
+          href="https://www.facebook.com/profile.php?id=100009935468631&mibextid=ZbWKwL"
           target="_blank"
           className="hover:scale-110 duration-300"
         >
           <span className="flex flex-col items-center">
             <AiFillFacebook />
-            <p className="text-sm">Facebook</p>
+            <p className="text-sm">الفيسبوك</p>
           </span>
         </Link>
       </div>

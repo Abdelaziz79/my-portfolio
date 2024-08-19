@@ -1,22 +1,55 @@
+import Autoplay from "embla-carousel-autoplay";
+
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Image from "next/image";
 import skillsList from "./skillsList";
 const Skills = () => {
   return (
     <>
       <div className=" py-10 mt-7 dark:text-white">
-        <h3 className="text-3xl py-1">Skills</h3>
+        <h3 className="text-3xl py-1">الآراء</h3>
+        <p className="py-2 leading-8 text-gray-800 text-md dark:text-white font-xl">
+          استمع مباشرة إلى تجارب مرضانا لتتعرف على جودة الخدمات المقدمة في
+          عيادتنا.
+        </p>
       </div>
-      <div className=" grid justify-center grid-cols-2  md:grid-cols-6 lg:grid-cols-8   ">
-        {skillsList.map((skill) => (
-          <div
-            key={skill.id}
-            className="p-5  flex items-center justify-center text-6xl m-2 bg-gray-100 rounded-full w-32 h-32 text-blue-500 shadow-md hover:shadow-lg dark:bg-gray-800 dark:text-blue-400 hover:scale-110 duration-300"
-          >
-            <div className="flex flex-col items-center ">
-              <skill.icon />
-              <p className="text-sm">{skill.name}</p>
-            </div>
-          </div>
-        ))}
+      <div className="flex align-middle justify-center w-full">
+        <Carousel
+          plugins={[
+            Autoplay({
+              delay: 3000,
+            }),
+          ]}
+          className="w-[40%] min-w-[400px]  "
+          dir="ltr"
+        >
+          <CarouselContent>
+            {skillsList.map((skill, index) => (
+              <CarouselItem key={index}>
+                <div className="p-1">
+                  <Card>
+                    <CardContent className="flex aspect-square items-center justify-center p-6">
+                      <Image
+                        src={skill.img}
+                        alt={skill.id.toString()}
+                        className=" rounded-sm"
+                      />
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
       </div>
     </>
   );
