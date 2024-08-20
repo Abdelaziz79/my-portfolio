@@ -20,7 +20,7 @@ const Footer = () => {
                 <span className="text-xl font-medium text-gray-800 dark:text-gray-200">
                   راسلنا عن طريق الواتساب
                 </span>
-                <div className="flex items-center">
+                <div className="flex items-center gap-1">
                   <span className="mr-2 text-green-600 dark:text-green-400">
                     01019488165
                   </span>
@@ -47,6 +47,19 @@ const Footer = () => {
               </Link>
             </li>
           </ul>
+        </div>
+        <div className="location mt-10">
+          <h3 className="text-3xl py-1">موقعنا</h3>
+          <p className="py-2 leading-8 text-gray-800 text-md dark:text-white font-xl">
+            سنباط - زفتا - الغربية
+          </p>
+          <div className="w-full">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3426.841966356656!2d31.210033410661257!3d30.807065805754437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzDCsDQ4JzIzLjciTiAzMcKwMTInMzQuNiJF!5e0!3m2!1sar!2seg!4v1724163133434!5m2!1sar!2seg"
+              loading="lazy"
+              className="w-[90%] max-w-[1000px] h-[300px] rounded-lg mx-auto"
+            />
+          </div>
         </div>
       </div>
 

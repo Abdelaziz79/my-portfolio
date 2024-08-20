@@ -1,18 +1,16 @@
 "use client";
-import Autoplay from "embla-carousel-autoplay";
 import { type CarouselApi } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 import Image from "next/image";
-import skillsList from "./skillsList";
 import React from "react";
+import skillsList from "./skillsList";
 const Skills = () => {
   return (
     <>
@@ -66,7 +64,7 @@ export function CarouselComp({
           }),
         ]}
         setApi={setApi}
-        className={className || `w-[40%] min-w-[400px]`}
+        className={className || `w-[40%] min-w-[350px] overflow-hidden`}
         dir="ltr"
       >
         <CarouselContent>
@@ -88,8 +86,6 @@ export function CarouselComp({
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="dark:text-white dark:bg-gray-800" />
-        <CarouselNext className="dark:text-white dark:bg-gray-800" />
       </Carousel>
       <div className="flex mt-1 space-x-2">
         {Array.from({ length: count }).map((_, index) => (
@@ -109,4 +105,5 @@ export function CarouselComp({
     </div>
   );
 }
+
 export default Skills;

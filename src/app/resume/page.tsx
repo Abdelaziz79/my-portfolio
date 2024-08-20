@@ -11,7 +11,7 @@ const Resume = () => {
       <div className="flex-grow">
         <div>
           <CarouselComp
-            className="w-[90%] max-w-[1000px] "
+            className="w-[90%] max-w-[1000px] overflow-hidden "
             list={certificateList}
           />
         </div>
