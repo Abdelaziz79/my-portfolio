@@ -1,14 +1,21 @@
-"use client";
-
 import { MiniFooter } from "../components/Footer/Footer";
-import PdfViewer from "./PdfViwer";
+import { CarouselComp } from "../components/Skills/Skills";
+import { certificateList } from "./certificateList";
 
-const resume = "/resume.pdf";
-const cv = "/cv.pdf";
 const Resume = () => {
   return (
-    <div className="min-h-screen">
-      <PdfViewer fileUrl={resume} />
+    <div className="min-h-screen flex flex-col">
+      <div className="dark:text-white text-center">
+        <h3 className="text-3xl mb-10">الشهادات الحاصل عليها</h3>
+      </div>
+      <div className="flex-grow">
+        <div>
+          <CarouselComp
+            className="w-[90%] max-w-[1000px] "
+            list={certificateList}
+          />
+        </div>
+      </div>
       <MiniFooter />
     </div>
   );

@@ -8,7 +8,7 @@ const About = () => {
     <>
       <div className="text-center p-10" id="about">
         <h2 className="text-5xl py-2 text-blue-600 font-medium md:text-6xl dark:text-blue-400">
-          عبدالله زوردق
+          عبدالله زردق
         </h2>
         <h3 className="text-2xl py-2 md:text-xl dark:text-white">
           دكتور علاج طبيعي.

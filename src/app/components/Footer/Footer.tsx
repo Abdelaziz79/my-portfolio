@@ -6,36 +6,48 @@ const Footer = () => {
     <>
       <div className=" py-10 mt-7 dark:text-white">
         <h3 className="text-3xl py-1">تواصل معنا</h3>
-        <form
-          className="flex flex-col py-10"
-          action="mailto:abdelazizelhadry1@gmail.com"
-          method="post"
-        >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 items-center  ">
-            <input
-              className="p-2 bg-gray-100 rounded-md h-14 dark:bg-gray-800 dark:text-white"
-              name="name"
-              type="text"
-              placeholder="Your Name"
-            />
-            <input
-              className="my-3  p-2 bg-gray-100 rounded-md h-14 dark:bg-gray-800 dark:text-white"
-              name="email"
-              type="email"
-              placeholder="Your Email"
-            />
-          </div>
-          <textarea
-            className="p-2 bg-gray-100 rounded-md h-40 dark:bg-gray-800 dark:text-white"
-            name="message"
-            placeholder="Your Message"
-          />
-          <input
-            className="mt-3 bg-gradient-to-r from-cyan-500 to-blue-500  px-4 py-1 rounded-md text-white hover:scale-110 duration-300 hover:from-blue-500 hover:to-cyan-500 cursor-pointer  w-28"
-            type="submit"
-            value="ارسال"
-          />
-        </form>
+        <p className="py-2 leading-8 text-gray-800 text-md dark:text-white font-xl">
+          تواصل معنا اليوم لتحسين جودة حياتك.
+        </p>
+        <div className="contact-methods">
+          <ul className="space-y-6">
+            <li className="transform transition-all  duration-300 hover:scale-[1.02]">
+              <Link
+                href="https://wa.me/201019488165"
+                target="_blank"
+                className="flex items-center justify-between p-4 rounded-lg bg-white shadow-md hover:shadow-lg dark:bg-gray-800 dark:hover:bg-gray-700"
+              >
+                <span className="text-xl font-medium text-gray-800 dark:text-gray-200">
+                  راسلنا عن طريق الواتساب
+                </span>
+                <div className="flex items-center">
+                  <span className="mr-2 text-green-600 dark:text-green-400">
+                    01019488165
+                  </span>
+                  <AiOutlineWhatsApp
+                    className="text-green-600 dark:text-green-400"
+                    size={28}
+                  />
+                </div>
+              </Link>
+            </li>
+            <li className="transform transition-all duration-300 hover:scale-[1.02]">
+              <Link
+                href="https://www.facebook.com/profile.php?id=100009935468631&mibextid=ZbWKwL"
+                target="_blank"
+                className="flex items-center justify-between p-4 rounded-lg bg-white shadow-md hover:shadow-lg dark:bg-gray-800 dark:hover:bg-gray-700"
+              >
+                <span className="text-xl font-medium text-gray-800 dark:text-gray-200">
+                  تواصل معنا عن طريق الفيسبوك
+                </span>
+                <AiFillFacebook
+                  className="text-blue-600 dark:text-blue-400"
+                  size={28}
+                />
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
 
       <MiniFooter />
@@ -81,7 +93,14 @@ export function MiniFooter() {
           </Link>
         </div>
         <p className="mt-10 text-center dark:text-gray-500">
-          © Abdelaziz Elhadry 2024
+          made with ❤️ by{" "}
+          <Link
+            href={"https://www.linkedin.com/in/abdelaziz-elhadry-02858631a/"}
+            target="_blank"
+            className="hover:text-blue-500 hover:text-[1.1rem] duration-300 text-blue-400 font-bold"
+          >
+            Abdelaziz
+          </Link>
         </p>
       </div>
     </div>
