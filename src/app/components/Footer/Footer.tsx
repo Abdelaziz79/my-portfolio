@@ -101,6 +101,9 @@ export function MiniFooter() {
           <Link href="/#projects" className="hover:scale-110 duration-300">
             الحالات
           </Link>
+          <Link href="/blogs" className="hover:scale-110 duration-300">
+            المدونة
+          </Link>
           <Link href="/resume" className="hover:scale-110 duration-300">
             الشهادات
           </Link>

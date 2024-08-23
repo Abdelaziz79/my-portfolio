@@ -2,17 +2,35 @@
 import { type CarouselApi } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
+import { getAllFeedbacks } from "@/app/services/feedbacks";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import { Loader } from "lucide-react";
 import Image from "next/image";
-import React from "react";
-import skillsList from "./skillsList";
+import React, { useEffect, useState } from "react";
+
 const Skills = () => {
-  return (
+  const [skillsList, setSkillsList] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  useEffect(() => {
+    const getData = async () => {
+      setIsLoading(true);
+      const data = await getAllFeedbacks();
+      setSkillsList(data as any);
+      setIsLoading(false);
+    };
+
+    getData();
+  }, []);
+  return isLoading ? (
+    <div className="flex items-center justify-center">
+      <Loader />
+    </div>
+  ) : (
     <>
       <div className=" py-10 mt-7 dark:text-white">
         <h3 className="text-3xl py-1">الآراء</h3>
@@ -74,7 +92,7 @@ export function CarouselComp({
                 <Card>
                   <CardContent className="flex aspect-square items-center justify-center p-6 dark:bg-gray-800">
                     <Image
-                      src={skill.img}
+                      src={skill.imgSrc}
                       alt={skill.id.toString()}
                       width={700}
                       height={700}

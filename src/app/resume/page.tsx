@@ -1,8 +1,10 @@
 import { MiniFooter } from "../components/Footer/Footer";
 import { CarouselComp } from "../components/Skills/Skills";
-import { certificateList } from "./certificateList";
+import { getAllCertifications } from "../services/certifications";
 
-const Resume = () => {
+const Resume = async () => {
+  const certificateList: { id: number; imgSrc: string }[] =
+    await getAllCertifications();
   return (
     <div className="min-h-screen flex flex-col">
       <div className="dark:text-white text-center">

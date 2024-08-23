@@ -1,4 +1,3 @@
-import myImage2 from "@/app/assets/images/abdalla.png";
 import Image from "next/image";
 import Link from "next/link";
 import { AiFillFacebook, AiOutlineWhatsApp } from "react-icons/ai";
@@ -8,7 +7,7 @@ const About = () => {
     <>
       <div className="text-center p-10" id="about">
         <h2 className="text-5xl py-2 text-blue-600 font-medium md:text-6xl dark:text-blue-400">
-          عبدالله زردق
+          دكتور عبدالله زردق
         </h2>
         <h3 className="text-2xl py-2 md:text-xl dark:text-white">
           دكتور علاج طبيعي.
@@ -44,9 +43,10 @@ const About = () => {
       <div className=" m-20 relative rounded-full bg-gradient-to-b from-blue-500 w-80 h-80 overflow-hidden mx-auto md:h-96 md:w-96 dark:text-white ">
         <Image
           className="mx-auto"
-          src={myImage2}
+          src="https://aryvoyijualfmzchcnjx.supabase.co/storage/v1/object/public/myImages/abdalla.png"
           alt="abdalla"
-          objectFit="cover"
+          width={450}
+          height={450}
         />
       </div>
     </>

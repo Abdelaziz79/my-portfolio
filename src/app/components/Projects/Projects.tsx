@@ -1,10 +1,34 @@
 "use client";
-
+import { getAllWorks } from "@/app/services/works";
+import { Loader } from "lucide-react";
+import { useEffect, useState } from "react";
 import Card from "../Card/Card";
-import projectList from "./projectList";
+
+type project = {
+  id: number;
+  title: string;
+  description: string;
+  imgSrc: string;
+};
 
 const Projects = () => {
-  return (
+  const [projectList, setProjectList] = useState<project[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  useEffect(() => {
+    const getData = async () => {
+      setIsLoading(true);
+      const data = await getAllWorks();
+      setProjectList(data);
+      setIsLoading(false);
+    };
+
+    getData();
+  }, []);
+  return isLoading ? (
+    <div className="flex items-center justify-center">
+      <Loader />
+    </div>
+  ) : (
     <>
       <div className="" id="projects">
         <h3 className="capitalize text-3xl py-1 dark:text-white">
@@ -22,7 +46,7 @@ const Projects = () => {
               key={project.id}
               description={project?.description}
               title={project?.title}
-              imageSrc={project.imageSrc}
+              imageSrc={project.imgSrc}
             />
           ))}
       </div>

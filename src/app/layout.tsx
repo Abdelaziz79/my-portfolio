@@ -34,11 +34,14 @@ export default function RootLayout({
                 </Link>
                 <ul className="flex items-center">
                   <li className="ml-5">
-                    <MyButton>
-                      <Link href="/resume" className="text-2xl">
-                        الشهادات
-                      </Link>
-                    </MyButton>
+                    <Link href="/resume">
+                      <MyButton>الشهادات</MyButton>
+                    </Link>
+                  </li>
+                  <li className="ml-5">
+                    <Link href="/blogs">
+                      <MyButton>المدونة</MyButton>
+                    </Link>
                   </li>
                   <li className="text-2xl cursor-pointer dark:text-white hover:scale-110 duration-300">
                     {darkMode ? (

@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    domains: ["aryvoyijualfmzchcnjx.supabase.co"],
+  },
   webpack: (config) => {
     config.resolve.alias.canvas = false;
 
