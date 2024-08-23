@@ -33,12 +33,12 @@ export default function RootLayout({
                   </h1>
                 </Link>
                 <ul className="flex items-center">
-                  <li className="ml-5">
+                  <li className="ml-3">
                     <Link href="/resume">
                       <MyButton>الشهادات</MyButton>
                     </Link>
                   </li>
-                  <li className="ml-5">
+                  <li className="ml-3">
                     <Link href="/blogs">
                       <MyButton>المدونة</MyButton>
                     </Link>
